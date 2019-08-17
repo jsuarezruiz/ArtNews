@@ -70,7 +70,7 @@
                     <ffimageloading:CachedImage
                         Aspect="AspectFill"
                         Source="{Binding ArtItem.Banner}"
-                        sharedTransitions:Transition.Tag="{Binding ArtItem.Number}" />
+                        sharedTransitions:Transition.Name="{Binding ArtItem.NumberText}" />
                 </Grid>
                 <!-- CONTENT -->
                 <StackLayout

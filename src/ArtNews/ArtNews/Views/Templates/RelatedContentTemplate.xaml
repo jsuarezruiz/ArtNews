@@ -17,7 +17,7 @@
                 <Setter Property="FontSize" Value="{StaticResource FontSize12}" />
                 <Setter Property="Margin" Value="0, 0, 0, 6" />
             </Style>
-            
+
         </ResourceDictionary>
     </ContentView.Resources>
     <ContentView.Content>

@@ -18,11 +18,7 @@ This project uses some third-party assets with a license that requires attributi
 - [FFImageLoading](https://github.com/daniel-luberda/FFImageLoading): by Daniel Luberda
 - [Xamanimation](https://github.com/jsuarezruiz/Xamanimation): by Javier Suárez
 
-The most important piece of the example is the use of a modified version of [Xamarin.Plugin.SharedTransitions](https://github.com/Evolutionlab/Xamarin.Plugin.SharedTransitions) by Giampaolo Gabba. The changes are:
-- Added more page transitions: Flip, SlideFromLeft, SlideFromRight, SlideFromTop and SlideFromBottom.
-- Small code fixes.
-
-All the changes (and some more as support to shared element transitions of more Xamarin.Forms controls) will be added to the library using PR.
+The most important piece of the example is the use  of [Xamarin.Plugin.SharedTransitions](https://github.com/Evolutionlab/Xamarin.Plugin.SharedTransitions) by Giampaolo Gabba.
 
 ## Copyright and license
 

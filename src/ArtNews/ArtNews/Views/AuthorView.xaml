@@ -161,14 +161,6 @@
                                 x:Name="HighlightTemplate"
                                 RowSpacing="0"
                                 Style="{StaticResource HighlightStyle}">
-                                <!--
-                                <Grid.GestureRecognizers>
-                                    <TapGestureRecognizer
-                                        BindingContext="{Binding Source={x:Reference Highlights}, Path=BindingContext}"
-                                        Command="{Binding ArtDetailCommand}"
-                                        CommandParameter="{Binding Source={x:Reference HighlightTemplate}, Path=BindingContext}"/>
-                                </Grid.GestureRecognizers>
-                                -->
                                 <Grid.GestureRecognizers>
                                     <TapGestureRecognizer
                                         Tapped="OnHighlightTapped"/>
@@ -183,8 +175,8 @@
                                     Grid.RowSpan="3"
                                     Aspect="AspectFill"
                                     Source="{Binding Banner}"
-                                    sharedTransitions:Transition.TagGroup="1"
-                                    sharedTransitions:Transition.Tag="{Binding Number}" />
+                                    sharedTransitions:Transition.Group="Banner"
+                                    sharedTransitions:Transition.Name="{Binding NumberText}" />
                                 <Label
                                     Grid.Row="1"
                                     Text="{Binding Name}"

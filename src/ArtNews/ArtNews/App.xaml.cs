@@ -1,7 +1,4 @@
-﻿using ArtNews.Services;
-using ArtNews.ViewModels;
-using ArtNews.ViewModels.Base;
-using System.Threading.Tasks;
+﻿using ArtNews.Views;
 using Xamarin.Forms;
 
 namespace ArtNews
@@ -11,18 +8,7 @@ namespace ArtNews
         public App()
         {
             InitializeComponent();
-            BuildDependencies();
-            InitNavigation();
-        }
-
-        void BuildDependencies()
-        {
-            Locator.Instance.Build();
-        }
-
-        Task InitNavigation()
-        {
-            return NavigationService.Instance.NavigateToAsync<AuthorViewModel>();
+            MainPage = new CustomNavigationPage(new AuthorView());
         }
 
         protected override void OnStart()

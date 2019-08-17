@@ -1,4 +1,5 @@
-﻿using Plugin.SharedTransitions;
+﻿using ArtNews.ViewModels;
+using Plugin.SharedTransitions;
 using Xamarin.Forms;
 
 namespace ArtNews.Views
@@ -8,15 +9,15 @@ namespace ArtNews.Views
         public AuthorView()
         {
             InitializeComponent();
+            BindingContext = new AuthorViewModel();
 
             SharedTransitionNavigationPage.SetBackgroundAnimation(this, BackgroundAnimation.Fade);
-            SharedTransitionNavigationPage.SetSharedTransitionDuration(this, 500);
+            SharedTransitionNavigationPage.SetTransitionDuration(this, 500);
         }
 
         private async void OnHighlightTapped(object sender, System.EventArgs e)
         {
-            // TODO: Fix shared element transition using the NavigationService.
-            SharedTransitionNavigationPage.SetSelectedTagGroup(this, 1);     
+            SharedTransitionNavigationPage.SetTransitionSelectedGroup(this, "Banner");     
             var context = (sender as View).BindingContext;
             await Navigation.PushAsync(new ArtDetailView(context));
         }

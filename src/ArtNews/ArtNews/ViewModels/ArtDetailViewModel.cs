@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using ArtNews.Models;
+﻿using ArtNews.Models;
 using ArtNews.ViewModels.Base;
 
 namespace ArtNews.ViewModels
@@ -24,16 +23,6 @@ namespace ArtNews.ViewModels
                 _artItem = value;
                 OnPropertyChanged();
             }
-        }
-
-        public override Task InitializeAsync(object navigationData)
-        {
-            if(navigationData is ArtItem)
-            {
-                ArtItem = (ArtItem)navigationData;
-            }
-
-            return base.InitializeAsync(navigationData);
         }
     }
 }

@@ -9,13 +9,12 @@ namespace ArtNews.Views
         public ArtDetailView(object parameter)
         {
             InitializeComponent();
-
-            if(Device.RuntimePlatform == "Android")
-                NavigationPage.SetHasNavigationBar(this, false);
-
             BindingContext = new ArtDetailViewModel(parameter);
 
-            SharedTransitionNavigationPage.SetSharedTransitionDuration(this, 500);
+            if (Device.RuntimePlatform == "Android")
+                NavigationPage.SetHasNavigationBar(this, false);
+
+            SharedTransitionNavigationPage.SetTransitionDuration(this, 500);
         }
     }
 }
